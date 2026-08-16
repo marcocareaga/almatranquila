@@ -82,8 +82,11 @@ h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.8rem
 .g4{grid-template-columns:repeat(2,1fr)}
 @media(min-width:1024px){.g4{grid-template-columns:repeat(4,1fr)}}
 .card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:var(--radius);padding:1.45rem}
-.pain-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.05rem;color:var(--gold);margin-bottom:.3rem}
-.pain-card p{font-size:.92rem;color:var(--muted)}
+.pain-card{display:flex;flex-direction:column;text-align:center}
+.pain-icon{width:3.1rem;height:3.1rem;margin:0 auto .85rem;display:flex;align-items:center;justify-content:center;border:1px solid rgba(232,200,115,.35);border-radius:16px;background:linear-gradient(180deg,rgba(232,200,115,.16),rgba(42,23,80,.25));box-shadow:inset 0 1px 0 rgba(232,200,115,.22),0 8px 20px rgba(0,0,0,.25)}
+.pain-icon svg{width:1.7rem;height:1.7rem;color:var(--gold)}
+.pain-card h3{display:inline-flex;align-items:center;justify-content:center;width:1.9rem;height:1.9rem;margin:0 auto .6rem;border:1px solid var(--gold);border-radius:50%;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1rem;color:var(--gold)}
+.pain-card p{font-size:.92rem;color:var(--muted);margin:0}
 .bridge{max-width:52ch;margin:2rem auto 0;text-align:center;color:var(--muted);font-size:.95rem}
 .sol-step{border:1px solid var(--line);border-radius:var(--radius);padding:1.45rem;background:linear-gradient(180deg,var(--card),var(--card2))}
 .sol-step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:999px;background:rgba(232,200,115,.14);color:var(--gold);font-family:'Cormorant Garamond',serif;font-weight:600;margin-bottom:.7rem}
@@ -191,11 +194,11 @@ footer a:hover{color:var(--gold)}
     <h2 data-i18n="painTitle">A ansiedade não avisa antes de chegar</h2>
     <div class="hairline"></div>
     <div class="grid g2">
-      <div class="card pain-card"><h3>1</h3><p data-i18n="pains:0">Você acorda de madrugada com o pensamento acelerado, sem conseguir desligar.</p></div>
-      <div class="card pain-card"><h3>2</h3><p data-i18n="pains:1">No meio do dia, o peito aperta e você sente que algo ruim vai acontecer.</p></div>
-      <div class="card pain-card"><h3>3</h3><p data-i18n="pains:2">À noite, a cabeça não desliga e o sono simplesmente não vem.</p></div>
-      <div class="card pain-card"><h3>4</h3><p data-i18n="pains:3">Já tentou de tudo: respiração, chás, vídeos… mas a paz dura pouco.</p></div>
-      <div class="card pain-card" style="grid-column:1/-1"><h3>5</h3><p data-i18n="pains:4">Você quer clamar a Deus, mas na hora da crise as palavras somem.</p></div>
+      <div class="card pain-card"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>1</h3><p data-i18n="pains:0">Você acorda de madrugada com o pensamento acelerado, sem conseguir desligar.</p></div>
+      <div class="card pain-card"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/><path d="M7 12h10M7 12l1-2h3l1-2"/></svg></div><h3>2</h3><p data-i18n="pains:1">No meio do dia, o peito aperta e você sente que algo ruim vai acontecer.</p></div>
+      <div class="card pain-card"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/><path d="M12 9v6M9 12h6"/></svg></div><h3>3</h3><p data-i18n="pains:2">À noite, a cabeça não desliga e o sono simplesmente não vem.</p></div>
+      <div class="card pain-card"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2-1 4-2.5 5.5S14 16.5 14 18H10c0-1.5-1-2.5-2.5-3.5S5 11 5 9a7 7 0 0 1 7-7z"/><path d="M12 3v2"/><path d="M8 21h8"/></svg></div><h3>4</h3><p data-i18n="pains:3">Já tentou de tudo: respiração, chás, vídeos… mas a paz dura pouco.</p></div>
+      <div class="card pain-card" style="grid-column:1/-1"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M7 8h10"/><path d="M12 8v16"/></svg></div><h3>5</h3><p data-i18n="pains:4">Você quer clamar a Deus, mas na hora da crise as palavras somem.</p></div>
     </div>
     <p class="bridge" data-i18n="painBridge">Se você se reconheceu em qualquer uma dessas frases, não foi por acaso que você chegou até aqui hoje.</p>
   </div>
