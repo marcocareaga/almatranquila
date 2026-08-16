@@ -93,6 +93,8 @@ h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.8rem
 .stat .n{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:2.4rem;line-height:1.1;color:var(--gold)}
 .stat h3{font-size:.95rem;font-weight:400;margin:.4rem 0 .25rem}
 .stat p{font-size:.82rem;color:var(--muted)}
+.stat .flags{display:flex;justify-content:center;gap:.4rem;margin-top:.7rem}
+.stat .flags .flag{width:26px;height:20px}
 .benefit h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.1rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem}
 .benefit h3 .mk{color:var(--gold)}
 .benefit p{font-size:.92rem;color:var(--muted)}
@@ -227,7 +229,7 @@ footer a:hover{color:var(--gold)}
       <div class="card stat"><div class="n" data-i18n="insideItems:0:n">30</div><h3 data-i18n="insideItems:0:title">Orações completas</h3><p data-i18n="insideItems:0:desc">Textos reais, prontos para ler.</p></div>
       <div class="card stat"><div class="n" data-i18n="insideItems:1:n">5</div><h3 data-i18n="insideItems:1:title">Capítulos temáticos</h3><p data-i18n="insideItems:1:desc">Organizados por momento do dia.</p></div>
       <div class="card stat"><div class="n" data-i18n="insideItems:2:n">∞</div><h3 data-i18n="insideItems:2:title">Acesso pelo celular e computador</h3><p data-i18n="insideItems:2:desc">Abra na hora da crise, onde estiver.</p></div>
-      <div class="card stat"><div class="n" data-i18n="insideItems:3:n">3</div><h3 data-i18n="insideItems:3:title">Idiomas disponíveis</h3><p data-i18n="insideItems:3:desc">Altere entre PT, ES e EN.</p></div>
+      <div class="card stat"><div class="n" data-i18n="insideItems:3:n">3</div><h3 data-i18n="insideItems:3:title">Idiomas disponíveis</h3><p data-i18n="insideItems:3:desc">Altere entre PT, ES e EN.</p><div class="flags"><svg class="flag" viewBox="0 0 24 18" role="img" aria-label="Português"><rect width="24" height="18" fill="#009C3B"/><path d="M12 1.5L22.5 9 12 16.5 1.5 9z" fill="#FFDF00"/><circle cx="12" cy="9" r="3.6" fill="#002776"/><path d="M9.6 7.6a3.6 3.6 0 0 0 2.4 5.0A4.2 4.2 0 1 1 12 4.8a3.6 3.6 0 0 0-2.4 2.8z" fill="#FFFFFF"/></svg><svg class="flag" viewBox="0 0 24 18" role="img" aria-label="Español"><rect width="24" height="6" y="0" fill="#C60B1E"/><rect width="24" height="6" y="6" fill="#FFC400"/><rect width="24" height="6" y="12" fill="#C60B1E"/></svg><svg class="flag" viewBox="0 0 24 18" role="img" aria-label="English"><rect width="24" height="18" fill="#FFF"/><g fill="#B22234"><rect width="24" height="1.385" y="0"/><rect width="24" height="1.385" y="2.77"/><rect width="24" height="1.385" y="5.54"/><rect width="24" height="1.385" y="8.31"/><rect width="24" height="1.385" y="11.08"/><rect width="24" height="1.385" y="13.85"/><rect width="24" height="1.385" y="16.62"/></g><rect width="9.6" height="9.7" fill="#3C3B6E"/><g fill="#FFF"><rect x="0.9" y="0.9" width="1" height="1"/><rect x="2.9" y="0.9" width="1" height="1"/><rect x="4.9" y="0.9" width="1" height="1"/><rect x="6.9" y="0.9" width="1" height="1"/><rect x="8.9" y="0.9" width="1" height="1"/><rect x="1.9" y="2.4" width="1" height="1"/><rect x="3.9" y="2.4" width="1" height="1"/><rect x="5.9" y="2.4" width="1" height="1"/><rect x="7.9" y="2.4" width="1" height="1"/><rect x="0.9" y="3.9" width="1" height="1"/><rect x="2.9" y="3.9" width="1" height="1"/><rect x="4.9" y="3.9" width="1" height="1"/><rect x="6.9" y="3.9" width="1" height="1"/><rect x="8.9" y="3.9" width="1" height="1"/><rect x="1.9" y="5.4" width="1" height="1"/><rect x="3.9" y="5.4" width="1" height="1"/><rect x="5.9" y="5.4" width="1" height="1"/><rect x="7.9" y="5.4" width="1" height="1"/><rect x="0.9" y="6.9" width="1" height="1"/><rect x="2.9" y="6.9" width="1" height="1"/><rect x="4.9" y="6.9" width="1" height="1"/><rect x="6.9" y="6.9" width="1" height="1"/><rect x="8.9" y="6.9" width="1" height="1"/><rect x="1.9" y="8.4" width="1" height="1"/><rect x="3.9" y="8.4" width="1" height="1"/><rect x="5.9" y="8.4" width="1" height="1"/><rect x="7.9" y="8.4" width="1" height="1"/></g></svg></div></div>
     </div>
   </div>
 </section>
@@ -588,7 +590,7 @@ cdDays:"days",cdHours:"hours",cdMins:"min",cdSecs:"sec"
 };
 function lookup(o,p){var parts=p.split(":");for(var i=0;i<parts.length;i++){o=o[parts[i]];}return o;}
 function tr(k){var v=lookup(I18N[L],k);if(typeof v==="string")v=v.trim();return v;}
-var L=(function(){try{var s=localStorage.getItem("oac_lang");if(s==="pt"||s==="es"||s==="en")return s;}catch(e){}var n=(navigator.language||"pt").toLowerCase();return (n.indexOf("es")===0)?"es":((n.indexOf("en")===0)?"en":"pt");})();
+var L=(function(){try{var s=localStorage.getItem("oac_lang");if(s==="pt"||s==="es"||s==="en")return s;}catch(e){}return "es";})();
 function applyLang(){
 document.documentElement.lang=(L==="pt")?"pt-BR":L;
 var i,els=document.querySelectorAll("[data-i18n]");
