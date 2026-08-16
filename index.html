@@ -54,9 +54,11 @@ a{color:inherit}
 .hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2.35rem,7.5vw,4.4rem);line-height:1.08;margin:1.5rem auto 1.15rem;max-width:22ch}
 .hero-sub{max-width:48ch;margin:0 auto;color:var(--muted);font-size:clamp(.98rem,2.4vw,1.15rem)}
 .cta-row{margin-top:2.1rem;display:flex;flex-direction:column;align-items:center;gap:.9rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border-radius:999px;padding:1.05rem 2.1rem;font-weight:500;font-size:1rem;text-decoration:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;text-align:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border-radius:999px;padding:1.05rem 2.1rem;font-weight:500;font-size:1rem;white-space:nowrap;text-decoration:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;text-align:center}
 .btn-gold{background:linear-gradient(135deg,#F6E2A8,#E8C873 45%,#C9A24B);color:#1c0d2e;box-shadow:0 8px 30px rgba(232,200,115,.32)}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 42px rgba(232,200,115,.46)}
+@media(max-width:420px){.btn{font-size:.88rem;padding:.95rem 1.25rem}}
+@media(max-width:340px){.btn{font-size:.8rem;padding:.85rem 1rem}}
 .price-note{color:var(--muted);font-size:.88rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;justify-content:center}
 .price-note .dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
 .urgency{margin-top:1.5rem;display:inline-flex;align-items:center;gap:.6rem;flex-wrap:wrap;justify-content:center;border:1px dashed var(--line);border-radius:14px;padding:.7rem 1.1rem;color:var(--muted);font-size:.85rem}
