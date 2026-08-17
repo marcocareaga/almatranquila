@@ -591,7 +591,7 @@ cdDays:"days",cdHours:"hours",cdMins:"min",cdSecs:"sec"
 };
 function lookup(o,p){var parts=p.split(":");for(var i=0;i<parts.length;i++){o=o[parts[i]];}return o;}
 function tr(k){var v=lookup(I18N[L],k);if(typeof v==="string")v=v.trim();return v;}
-var L=(function(){try{var s=localStorage.getItem("oac_lang");if(s==="pt"||s==="es"||s==="en")return s;}catch(e){}return "es";})();
+var L="es";
 function applyLang(){
 document.documentElement.lang=(L==="pt")?"pt-BR":L;
 var i,els=document.querySelectorAll("[data-i18n]");
@@ -601,7 +601,6 @@ els=document.querySelectorAll("[data-i18n-html]");
 for(i=0;i<els.length;i++){var h=els[i],hk=h.getAttribute("data-i18n-html");var hv=tr(hk);if(typeof hv!=="undefined")h.innerHTML=hv;}
 var btns=document.querySelectorAll(".lang button");
 for(i=0;i<btns.length;i++){var b=btns[i];b.setAttribute("aria-pressed",b.getAttribute("data-lang")===L?"true":"false");}
-try{localStorage.setItem("oac_lang",L);}catch(e){}
 }
 document.addEventListener("click",function(ev){
 var b=ev.target.closest(".lang button");
