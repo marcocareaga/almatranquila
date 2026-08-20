@@ -138,6 +138,124 @@ details.faq .faq-a{padding:0 1.3rem 1.25rem;color:var(--muted);font-size:.92rem}
 footer{border-top:1px solid rgba(232,200,115,.08);padding:2rem 0 2.6rem;text-align:center;color:#8D83A3;font-size:.78rem}
 footer .foot-links{display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
 footer a:hover{color:var(--gold)}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+@media(max-width:480px){
+  .wrap{padding:0 .9rem}
+  .hero{padding:3.5rem 0 2.5rem}
+  .hero h1{font-size:clamp(1.9rem,8vw,3rem);max-width:none;line-height:1.15}
+  .hero h1 br{display:none}
+  .hero h1::after{content:" ";display:block;margin:.5rem auto 0}
+  .hero-sub{font-size:clamp(.9rem,3.5vw,1.05rem);max-width:none}
+  .cta-row{margin-top:1.5rem;gap:.7rem}
+  .btn{width:100%;max-width:28rem;font-size:.95rem;padding:1rem 1.5rem}
+  .urgency{margin-top:1.5rem;padding:.85rem 1rem;border-radius:12px}
+  .urgency span{font-size:.85rem}
+  .urgency span:last-child{font-size:.78rem;margin-top:.25rem}
+  .badge{font-size:.6rem;padding:.35rem .8rem}
+  section{padding:2.8rem 0}
+  .kicker{font-size:.6rem;margin-bottom:.5rem}
+  h2{font-size:clamp(1.5rem,6vw,2.3rem);line-height:1.2}
+  .lead{font-size:.9rem}
+  .grid{gap:.85rem;margin-top:1.8rem}
+  .card{padding:1.2rem;border-radius:16px}
+  .pain-icon{width:2.8rem;height:2.8rem;margin-bottom:.7rem}
+  .pain-icon svg{width:1.5rem;height:1.5rem}
+  .pain-card p{font-size:.88rem}
+  .bridge{font-size:.9rem;margin-top:1.5rem}
+  .sol-step{padding:1.2rem}
+  .sol-step h3{font-size:1.02rem}
+  .sol-step p{font-size:.88rem}
+  .stat .n{font-size:2rem}
+  .stat h3{font-size:.9rem}
+  .stat p{font-size:.78rem}
+  .benefit h3{font-size:1.02rem}
+  .benefit p{font-size:.88rem}
+  .testi{padding:1.2rem}
+  .testi .q{font-size:.98rem;line-height:1.55}
+  .testi .who{flex-wrap:wrap;gap:.5rem}
+  .testi .who img{width:36px;height:36px}
+  .testi .who b{font-size:.9rem}
+  .testi .who span{font-size:.78rem}
+  .offer-card{padding:1.5rem 1rem;border-radius:20px}
+  .offer-price .now{font-size:clamp(2rem,10vw,2.8rem)}
+  .offer-list{max-width:none;font-size:.88rem;gap:.45rem}
+  .offer-list li{gap:.5rem}
+  .offer-deadline{font-size:.8rem}
+  .offer-scarcity{font-size:.78rem}
+  .bonus{flex-direction:column;gap:.75rem;padding:1.2rem}
+  .bonus .tag{font-size:.58rem;padding:.2rem .5rem}
+  .bonus h3{font-size:1.05rem}
+  .bonus p{font-size:.88rem}
+  .guar{padding:1.5rem 1rem}
+  .guar h2{font-size:clamp(1rem,5vw,1.2rem);white-space:normal}
+  .guar-text{font-size:.9rem}
+  details.faq summary{font-size:.98rem;padding:1rem 1.1rem}
+  details.faq .faq-a{font-size:.88rem;padding:0 1.1rem 1.1rem}
+  .final{padding:3.5rem 0}
+  .final h2{font-size:clamp(1.5rem,6vw,2.2rem);max-width:none}
+  .final .lead{font-size:.9rem}
+  footer{padding:1.5rem 0 2rem;font-size:.72rem}
+  .strip{margin:1.5rem .9rem;border-radius:14px}
+}
+@media(max-width:360px){
+  .hero h1{font-size:clamp(1.7rem,9vw,2.6rem)}
+  .hero-sub{font-size:.88rem}
+  .btn{font-size:.85rem;padding:.9rem 1.2rem}
+  .urgency{padding:.7rem .85rem}
+  .urgency span{font-size:.8rem}
+  .urgency span:last-child{font-size:.72rem}
+  .card{padding:1rem}
+  .pain-card p{font-size:.84rem}
+  .sol-step{padding:1rem}
+  .sol-step h3{font-size:.95rem}
+  .sol-step p{font-size:.84rem}
+  .testi .q{font-size:.92rem}
+  .testi .who img{width:32px;height:32px}
+  .offer-card{padding:1.2rem .85rem}
+  .offer-list li{font-size:.84rem}
+  .bonus h3{font-size:.98rem}
+  .bonus p{font-size:.84rem}
+  details.faq summary{font-size:.92rem;padding:.9rem 1rem}
+  details.faq .faq-a{font-size:.84rem;padding:0 1rem 1rem}
+}
+@media(max-width:320px){
+  .wrap{padding:0 .7rem}
+  .hero{padding:3rem 0 2rem}
+  .hero h1{font-size:1.6rem}
+  .strip{margin:1rem .7rem;border-radius:12px}
+  .card{padding:.9rem;border-radius:14px}
+  .sol-step{padding:.9rem}
+  .testi{padding:1rem}
+  .offer-card{padding:1rem .7rem}
+  .guar{padding:1.2rem .7rem}
+  .final{padding:3rem 0}
+}
+@media(min-width:481px) and (max-width:768px){
+  .hero h1 br{display:none}
+  .hero h1::after{content:" ";display:block;margin:.5rem auto 0}
+  .hero h1{max-width:none}
+  .grid.g4{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:769px){
+  .hero h1 br{display:inline}
+  .hero h1::after{display:none}
+}
+
+/* Prevent text overflow */
+*{word-wrap:break-word;overflow-wrap:break-word;hyphens:auto}
+.hero h1,.bridge,.testi .q,.guar-text,.faq-a,.offer-list li,.bonus p,.sol-step p,.pain-card p,.benefit p,.lead,.hero-sub{hyphens:auto}
+
+/* Smooth avatar loading */
+.testi .who img{background:linear-gradient(135deg,var(--card),var(--card2));transition:opacity .3s ease}
+.testi .who img[src]{opacity:1}
+
+/* Fix lang buttons on very small screens */
+@media(max-width:360px){
+  .lang button{padding:3px 6px;font-size:10px}
+  .flag{width:18px;height:13px}
+  .brand-name{font-size:.95rem}
+}
 </style>
 </head>
 <body>
