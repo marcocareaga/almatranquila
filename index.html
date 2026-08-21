@@ -51,7 +51,7 @@ a{color:inherit}
 .hero{padding:4.5rem 0 3.6rem;text-align:center}
 @media(min-width:768px){.hero{padding:6rem 0 4rem}}
 .badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--line);background:rgba(232,200,115,.08);color:var(--gold);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;padding:.45rem 1rem;border-radius:999px}
-.hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2.35rem,7.5vw,4.4rem);line-height:1.08;margin:1.5rem auto 1.15rem;max-width:22ch}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2.35rem,7.5vw,4.4rem);line-height:1.15;margin:1.5rem auto 1.15rem;max-width:34ch;hyphens:none;word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
 .hero-sub{max-width:48ch;margin:0 auto;color:var(--muted);font-size:clamp(.98rem,2.4vw,1.15rem)}
 .cta-row{margin-top:2.1rem;display:flex;flex-direction:column;align-items:center;gap:.9rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border-radius:999px;padding:1.05rem 2.1rem;font-weight:500;font-size:1rem;white-space:nowrap;text-decoration:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;text-align:center}
@@ -145,10 +145,10 @@ footer a:hover{color:var(--gold)}
 @media(max-width:480px){
   .wrap{padding:0 .9rem}
   .hero{padding:3.5rem 0 2.5rem}
-  .hero h1{font-size:clamp(2.2rem,9vw,3.4rem);max-width:none;line-height:1.15;hyphens:none}
+  .hero h1{font-size:clamp(2.2rem,9vw,3.4rem);max-width:30ch;line-height:1.2;hyphens:none;word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
   .hero h1 br{display:none}
   .hero h1::after{display:none}
-  .headline-gap{display:inline-block;width:0.75em}
+  .headline-gap{display:none}
   .hero-sub{font-size:clamp(.9rem,3.5vw,1.05rem);max-width:none}
   .cta-row{margin-top:1.5rem;gap:.7rem}
   .btn{width:100%;max-width:28rem;font-size:.95rem;padding:1rem 1.5rem}
@@ -203,7 +203,7 @@ footer a:hover{color:var(--gold)}
   .strip{margin:1.5rem .9rem;border-radius:14px}
 }
 @media(max-width:360px){
-  .hero h1{font-size:clamp(2rem,10vw,3rem);hyphens:none}
+  .hero h1{font-size:clamp(2rem,10vw,3rem);max-width:28ch;line-height:1.2;hyphens:none;word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
   .hero-sub{font-size:.88rem}
   .btn{font-size:.85rem;padding:.9rem 1.2rem}
   .urgency{padding:.7rem .85rem;display:block;width:100%;box-sizing:border-box}
@@ -227,7 +227,7 @@ footer a:hover{color:var(--gold)}
 @media(max-width:320px){
   .wrap{padding:0 .7rem}
   .hero{padding:3rem 0 2rem}
-  .hero h1{font-size:clamp(1.8rem,11vw,2.4rem);hyphens:none}
+  .hero h1{font-size:clamp(1.8rem,11vw,2.4rem);max-width:26ch;line-height:1.2;hyphens:none;word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
   .strip{margin:1rem .7rem;border-radius:12px}
   .card{padding:.9rem;border-radius:14px}
   .sol-step{padding:.9rem}
@@ -239,14 +239,15 @@ footer a:hover{color:var(--gold)}
 @media(min-width:481px) and (max-width:768px){
   .hero h1 br{display:none}
   .hero h1::after{display:none}
-  .headline-gap{display:inline-block;width:0.75em}
-  .hero h1{max-width:none}
+  .headline-gap{display:none}
+  .hero h1{max-width:34ch;text-wrap:balance}
   .grid.g4{grid-template-columns:repeat(2,1fr)}
 }
 @media(min-width:769px){
-  .hero h1 br{display:inline}
+  .hero h1 br{display:none}
   .hero h1::after{display:none}
   .headline-gap{display:none}
+  .hero h1{max-width:34ch;text-wrap:balance}
 }
 
 /* Prevent text overflow */
@@ -294,7 +295,7 @@ h1{hyphens:none}
 <section class="hero" style="padding-bottom:2.6rem">
   <div class="wrap">
     <span class="badge" data-i18n="heroBadge">✦ Guia Espiritual Premium ✦</span>
-    <h1><span data-i18n="heroTitle:0">Quando a sua mente não encontra paz,</span><span class="headline-gap" aria-hidden="true"></span><span class="text-gold" data-i18n="heroTitle:1">Deus já tem uma palavra pronta para este momento</span></h1>
+    <h1 data-i18n="heroTitle">Quando a sua mente não encontra paz, <span class="text-gold">Deus já tem uma palavra pronta para este momento</span></h1>
     <p class="hero-sub" data-i18n="heroSub">30 orações para acompanhar você nos momentos de preocupação, medo, angústia ou quando simplesmente precisa parar e encontrar um momento de paz.</p>
     <div class="cta-row">
       <a class="btn btn-gold" href="https://pay.kiwify.com.br/U3M5tjY" target="_blank" rel="noopener" data-i18n="heroCta" data-track="InitiateCheckout">Quero acalmar minha alma agora</a>
@@ -486,7 +487,7 @@ h1{hyphens:none}
 var I18N={
 pt:{
 heroBadge:"✦ Guia Espiritual Premium ✦",
-heroTitle:["Quando a sua mente não encontra paz,","Deus já tem uma palavra pronta para este momento"],
+heroTitle:"Quando a sua mente não encontra paz, <span class=\"text-gold\">Deus já tem uma palavra pronta para este momento</span>",
 heroSub:"30 orações para acompanhar você nos momentos de preocupação, medo, angústia ou quando simplesmente precisa parar e encontrar um momento de paz.",
 heroCta:"Quero acalmar minha alma agora",
 heroPriceNote:"Acesso imediato · por menos que um café",
@@ -562,7 +563,7 @@ cdDays:"dias",cdHours:"horas",cdMins:"min",cdSecs:"seg"
 },
 es:{
 heroBadge:"✦ Guía Espiritual Premium ✦",
-heroTitle:["Cuando tu mente no encuentra paz,","encuentra palabras para hablar con Dios."],
+heroTitle:"Cuando tu mente no encuentra paz, <span class=\"text-gold\">encuentra palabras para hablar con Dios.</span>",
 heroSub:"30 oraciones para acompañarte en los momentos de preocupación, miedo, angustia o cuando simplemente necesitas detenerte y encontrar un momento de paz.",
 heroCta:"Quiero encontrar paz ahora",
 heroPriceNote:"Acceso inmediato · por menos que un café",
@@ -638,7 +639,7 @@ cdDays:"días",cdHours:"horas",cdMins:"min",cdSecs:"seg"
 },
 en:{
 heroBadge:"✦ Premium Spiritual Guide ✦",
-heroTitle:["When your mind can't find peace,","God already has a word ready for this moment"],
+heroTitle:"When your mind can\'t find peace, <span class=\"text-gold\">God already has a word ready for this moment</span>",
 heroSub:"30 prayers to walk with you through moments of worry, fear or distress, or when you simply need to stop and find a moment of peace.",
 heroCta:"I want to calm my soul now",
 heroPriceNote:"Instant access · for less than a coffee",
