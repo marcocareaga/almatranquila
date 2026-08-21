@@ -63,6 +63,8 @@ a{color:inherit}
 .price-note .dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
 .urgency{margin-top:1.5rem;display:inline-flex;align-items:center;gap:.6rem;flex-wrap:wrap;justify-content:center;border:1px dashed var(--line);border-radius:14px;padding:.7rem 1.1rem;color:var(--muted);font-size:.85rem}
 .urgency b{color:var(--gold);font-weight:500}
+.urgency-main{color:var(--gold);font-weight:500;font-size:.95rem;white-space:nowrap}
+.urgency-sub{color:var(--muted);font-size:.85rem;white-space:nowrap}
 .countdown{display:flex;gap:.5rem;align-items:stretch;justify-content:center;margin-top:1rem}
 .cd{min-width:64px;border:1px solid var(--line);background:rgba(42,23,80,.4);border-radius:12px;padding:.55rem .4rem;text-align:center}
 .cd .num{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.5rem;color:var(--gold);line-height:1.1}
@@ -150,8 +152,8 @@ footer a:hover{color:var(--gold)}
   .cta-row{margin-top:1.5rem;gap:.7rem}
   .btn{width:100%;max-width:28rem;font-size:.95rem;padding:1rem 1.5rem}
   .urgency{margin-top:1.5rem;padding:.85rem 1rem;border-radius:12px}
-  .urgency span{font-size:.85rem}
-  .urgency span:last-child{font-size:.78rem;margin-top:.25rem}
+  .urgency-main{font-size:.85rem;white-space:nowrap}
+  .urgency-sub{font-size:.78rem;white-space:nowrap;margin-top:.25rem;display:block}
   .badge{font-size:.6rem;padding:.35rem .8rem}
   section{padding:2.8rem 0}
   .kicker{font-size:.6rem;margin-bottom:.5rem}
@@ -203,8 +205,8 @@ footer a:hover{color:var(--gold)}
   .hero-sub{font-size:.88rem}
   .btn{font-size:.85rem;padding:.9rem 1.2rem}
   .urgency{padding:.7rem .85rem}
-  .urgency span{font-size:.8rem}
-  .urgency span:last-child{font-size:.72rem}
+  .urgency-main{font-size:.8rem;white-space:nowrap}
+  .urgency-sub{font-size:.72rem;white-space:nowrap;margin-top:.2rem;display:block}
   .card{padding:1rem}
   .pain-card p{font-size:.84rem}
   .sol-step{padding:1rem}
@@ -293,8 +295,8 @@ footer a:hover{color:var(--gold)}
       <span class="price-note"><span data-i18n="heroPriceNote">Acesso imediato · por menos que um café</span></span>
     </div>
     <div class="urgency" style="margin-top:2rem;background:linear-gradient(135deg,rgba(232,200,115,.15),rgba(124,77,255,.1));border:1px solid var(--gold);border-radius:14px;padding:1rem 1.25rem;text-align:center">
-      <span style="font-size:.95rem;font-weight:500;color:var(--gold);display:block">🎁 Preço de lançamento internacional: <b>US$ 6.90</b></span>
-      <span style="font-size:.85rem;color:var(--muted);margin-top:.35rem;display:block">Promoção exclusiva de lançamento — valor regular US$ 27.00</span>
+      <span class="urgency-main">🎁 Preço de lançamento internacional: <b>US$ 6.90</b></span>
+      <span class="urgency-sub">Promoção exclusiva de lançamento — valor regular US$ 27.00</span>
     </div>
   </div>
 </section>
