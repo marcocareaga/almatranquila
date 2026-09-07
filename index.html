@@ -37,6 +37,8 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 img{max-width:100%;display:block}
 a{color:inherit}
 .text-gold{background:linear-gradient(120deg,#F6E2A8 0%,#E8C873 42%,#F3D693 62%,#C9A24B 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mobile-break{display:none}
+@media(max-width:480px){.mobile-break{display:block}}
 .site-header{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:rgba(19,7,34,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .header-inner{max-width:64rem;margin:0 auto;height:3.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 .8rem}
 @media(min-width:640px){.header-inner{height:4rem;padding:0 1rem}}
@@ -313,7 +315,7 @@ h1{hyphens:none}
   <div class="wrap">
     <span class="badge" data-i18n="heroBadge">✦ SOS da Alma ✦</span>
     <h1 data-i18n="heroTitle">Quando você não encontrar palavras para falar com Deus, encontre uma oração para o que você está vivendo.</h1>
-    <p class="hero-sub" data-i18n="heroSub">SOS da Alma é um espaço de oração com 30 orações para diferentes momentos da vida — para quando o coração está apertado, a mente não para, a noite parece difícil ou você simplesmente precisa parar por alguns minutos e colocar tudo diante de Deus.</p>
+    <p class="hero-sub" data-i18n="heroSub">Uma oração para cada momento em que o seu coração precisa parar, entregar suas preocupações e aproximar-se de Deus. Suas forças se renovam, paz e tranquilidade invadem a alma.</p>
     <div class="cta-row">
       <a class="btn btn-gold" href="https://pay.kiwify.com.br/U3M5tjY" target="_blank" rel="noopener" data-i18n="heroCta" data-track="InitiateCheckout">Começar meu diálogo com Deus</a>
       <span class="price-note"><span data-i18n="heroPriceNote">Acesso imediato · por menos que um café</span></span>
@@ -330,7 +332,7 @@ h1{hyphens:none}
 <section id="dor">
   <div class="wrap">
     <span class="kicker" data-i18n="painKicker">Como funciona o guia</span>
-    <h2 data-i18n="painTitle">O app pergunta: o que você sente? Você escolhe o tema.</h2>
+    <h2 data-i18n="painTitle">O aplicativo pergunta: O que você está sentindo agora?<br class="mobile-break">E você escolhe o tema.</h2>
     <div class="hairline"></div>
     <p class="lead" data-i18n="painLead" style="max-width:58ch;margin:1.1rem auto 0;text-align:center;color:var(--muted);font-size:1.05rem">Não há menus complexos nem índices para decorar. A tela inicial mostra 18 botões com os temas reais da vida. Você toca no que ressoa — e vai direto ao diálogo com Deus para aquela dor.</p>
     <div class="grid g4" style="margin-top:2.5rem">
@@ -519,7 +521,7 @@ pt:{
   heroBadge:"✦ SOS da Alma ✦",
   brandName:"SOS da Alma",
   heroTitle:"Quando você não encontrar palavras para falar com Deus, encontre uma oração para o que você está vivendo.",
-  heroSub:"SOS da Alma é um espaço de oração com 30 orações para diferentes momentos da vida — para quando o coração está apertado, a mente não para, a noite parece difícil ou você simplesmente precisa parar por alguns minutos e colocar tudo diante de Deus.",
+  heroSub:"Uma oração para cada momento em que o seu coração precisa parar, entregar suas preocupações e aproximar-se de Deus. Suas forças se renovam, paz e tranquilidade invadem a alma.",
   heroCta:"Começar meu diálogo com Deus",
   heroPriceNote:"Acesso imediato · por menos que um café",
   footerNote:"Acesso imediato",
@@ -527,7 +529,7 @@ pt:{
   heroUrgencyMain:"💎 Preço de lançamento internacional: US$ 6.90",
   heroUrgencySub:"Promoção exclusiva de lançamento — valor regular US$ 27.00",
   painKicker:"Como funciona o guia",
-  painTitle:"O app pergunta: o que você sente? Você escolhe o tema.",
+  painTitle:"O aplicativo pergunta: O que você está sentindo agora?<br class=\"mobile-break\">E você escolhe o tema.",
   painLead:"Não há menus complexos nem índices para decorar. A tela inicial mostra 18 botões com os temas reais da vida. Você toca no que ressoa — e vai direto ao diálogo com Deus para aquela dor.",
   theme:["Ansiedade","Angústia","Medo","Tristeza","Insônia","Família","Trabalho","Dinheiro","Relacionamentos","Solidão","Luto","Saúde","Futuro incerto","Começar o dia","Descansar à noite","Gratidão"],
   painBridge:"Cada botão abre um caminho de 3 a 4 orações específicas para aquele tema. São diálogos de conexão — não fórmulas, não promessas.",
@@ -600,7 +602,7 @@ es:{
   heroBadge:"✦ SOS del Alma ✦",
   brandName:"SOS del Alma",
   heroTitle:"Cuando no encuentras palabras para hablar con Dios, encuentra una oración para lo que estás viviendo.",
-  heroSub:"SOS del Alma es un espacio de oración con 30 oraciones para distintos momentos de la vida — para cuando el corazón está oprimido, la mente no para, la noche se hace cuesta arriba o simplemente necesitas parar unos minutos y ponerlo todo delante de Dios.",
+  heroSub:"Una oración para cada momento en que tu corazón necesita parar, entregar sus preocupaciones y acercarse a Dios. Tus fuerzas se renuevan, paz y tranquilidad invaden el alma.",
   heroCta:"Empezar mi diálogo con Dios",
   heroPriceNote:"Acceso inmediato · por menos que un café",
   footerNote:"Acceso inmediato",
@@ -608,7 +610,7 @@ es:{
   heroUrgencyMain:"💎 Precio de lanzamiento internacional: US$ 6.90",
   heroUrgencySub:"Promoción exclusiva de lanzamiento — valor regular US$ 27.00",
   painKicker:"Cómo funciona la guía",
-  painTitle:"La app pregunta: ¿qué sientes? Eliges el tema.",
+  painTitle:"La app pregunta: ¿qué sientes?<br class=\"mobile-break\">Eliges el tema.",
   painLead:"No hay menús complejos ni índices para memorizar. La pantalla inicial muestra 18 botones con los temas reales de la vida. Tocas lo que resuena — y vas directo al diálogo con Dios para ese dolor.",
   theme:["Ansiedad","Angustia","Miedo","Tristeza","Insomnio","Familia","Trabajo","Dinero","Relaciones","Soledad","Duelo","Salud","Futuro incierto","Empezar el día","Descansar por la noche","Gratitud"],
   painBridge:"Cada botón abre un camino de 3 a 4 oraciones específicas para ese tema. Son diálogos de conexión — no fórmulas, no promesas.",
@@ -681,7 +683,7 @@ en:{
   heroBadge:"✦ Soul's SOS ✦",
   brandName:"Soul's SOS",
   heroTitle:"When you can't find words to talk to God, find a prayer for what you're living through.",
-  heroSub:"Soul's SOS is a prayer space with 30 prayers for different life moments — for when your heart is tight, your mind won't stop, the night feels heavy, or you just need a few minutes to lay everything before God.",
+  heroSub:"A prayer for every moment your heart needs to pause, surrender your worries, and draw near to God. Your strength is renewed, peace and stillness fill your soul.",
   heroCta:"Start my conversation with God",
   heroPriceNote:"Instant access · for less than a coffee",
   footerNote:"Instant access",
@@ -689,7 +691,7 @@ en:{
   heroUrgencyMain:"💎 International launch price: US$ 6.90",
   heroUrgencySub:"Exclusive launch promotion — regular price US$ 27.00",
   painKicker:"How the guide works",
-  painTitle:"The app asks: how are you feeling? You choose the theme.",
+  painTitle:"The app asks: what are you feeling?<br class=\"mobile-break\">You choose the theme.",
   painLead:"No complex menus or indexes to memorize. The home screen shows 18 buttons with real-life themes. You tap what resonates — and go straight to the conversation with God for that pain.",
   theme:["Anxiety","Distress","Fear","Sadness","Insomnia","Family","Work","Money","Relationships","Loneliness","Grief","Health","Uncertain Future","Start the Day","End the Day","Gratitude"],
   painBridge:"Each button opens a path of 3–4 prayers specific to that theme. These are connection dialogues — not formulas, not promises.",
