@@ -75,7 +75,7 @@ section + section{border-top:1px solid rgba(232,200,115,.08)}
 @media(max-width:640px){.strip{width:100%;max-width:100%;margin:2rem 0;border-radius:14px}}
 .kicker{display:block;text-align:center;color:var(--gold);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;margin-bottom:.7rem}
 h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.8rem,5.2vw,2.9rem);text-align:center;line-height:1.14}
-@media(max-width:470px){#conteudo h2,#bonus h2{white-space:nowrap;font-size:clamp(14px,5vw,29px)} #dor h2{white-space:pre-line;font-size:clamp(1.5rem,6vw,2.3rem);line-height:1.2}}@media(min-width:471px){#conteudo h2,#bonus h2,#dor h2{white-space:nowrap}}
+@media(max-width:470px){#conteudo h2,#bonus h2{white-space:nowrap;font-size:clamp(14px,5vw,29px)} #dor h2{white-space:pre-line;font-size:clamp(1.5rem,6vw,2.3rem);line-height:1.2}}@media(min-width:471px){#conteudo h2,#bonus h2{white-space:nowrap} #dor h2{white-space:normal}}
 .lead{max-width:58ch;margin:1.1rem auto 0;color:var(--muted);text-align:center}
 .hairline{width:6rem;height:1px;margin:1.5rem auto 0;background:linear-gradient(90deg,transparent,#E8C873,transparent)}
 .grid{display:grid;gap:1rem;margin-top:2.5rem}
@@ -88,8 +88,8 @@ h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.8rem
 .strip{width:100%;max-width:46rem;margin:2.5rem auto;aspect-ratio:16/9;background-size:cover;background-position:center;border:2px solid var(--gold);border-radius:18px;box-shadow:inset 0 0 0 5px rgba(19,7,34,.55),inset 0 0 0 6px rgba(232,200,115,.35),0 0 0 6px rgba(26,10,46,.9),0 0 0 7px rgba(201,162,75,.55),0 0 34px rgba(232,200,115,.28),0 20px 48px rgba(0,0,0,.5);transition:border-color .25s ease,box-shadow .25s ease,transform .15s ease}
 .strip:hover{border-color:rgba(124,77,255,.9);transform:translateY(-3px);box-shadow:inset 0 0 0 5px rgba(19,7,34,.55),inset 0 0 0 6px rgba(124,77,255,.35),0 0 0 6px rgba(26,10,46,.9),0 0 0 7px rgba(124,77,255,.55),0 0 46px rgba(124,77,255,.4),0 26px 56px rgba(0,0,0,.55)}
 .pain-card{display:flex;flex-direction:column;text-align:center}
-.pain-icon{width:3.1rem;height:3.1rem;margin:0 auto .85rem;display:flex;align-items:center;justify-content:center;border:1px solid rgba(232,200,115,.35);border-radius:16px;background:linear-gradient(180deg,rgba(232,200,115,.16),rgba(42,23,80,.25));box-shadow:inset 0 1px 0 rgba(232,200,115,.22),0 8px 20px rgba(0,0,0,.25)}
-.pain-icon svg{width:1.7rem;height:1.7rem;stroke:var(--gold);fill:none}
+.pain-icon{width:3.4rem;height:3.4rem;margin:0 auto .85rem;display:flex;align-items:center;justify-content:center;border:1px solid rgba(232,200,115,.45);border-radius:16px;background:linear-gradient(180deg,rgba(232,200,115,.22),rgba(42,23,80,.3));box-shadow:inset 0 1px 0 rgba(232,200,115,.3),0 0 18px rgba(232,200,115,.15),0 8px 20px rgba(0,0,0,.25)}
+.pain-icon svg{width:1.9rem;height:1.9rem;stroke:var(--gold);fill:none}
 .pain-card p{font-size:.92rem;color:var(--muted);margin:0}
 .bridge{max-width:52ch;margin:2rem auto 0;text-align:center;color:var(--muted);font-size:.95rem}
 .sol-step{border:1px solid var(--line);border-radius:var(--radius);padding:1.45rem;background:linear-gradient(180deg,var(--card),var(--card2))}
@@ -165,8 +165,8 @@ footer a:hover{color:var(--gold)}
   .lead{font-size:.9rem}
   .grid{gap:.85rem;margin-top:1.8rem}
   .card{padding:1.2rem;border-radius:16px}
-  .pain-icon{width:2.8rem;height:2.8rem;margin-bottom:.7rem}
-  .pain-icon svg{width:1.5rem;height:1.5rem}
+  .pain-icon{width:3rem;height:3rem;margin-bottom:.7rem}
+  .pain-icon svg{width:1.6rem;height:1.6rem}
   .pain-card p{font-size:.88rem}
   .bridge{font-size:.9rem;margin-top:1.5rem}
   .sol-step{padding:1.2rem}
@@ -202,7 +202,7 @@ footer a:hover{color:var(--gold)}
   .final h2{font-size:clamp(1.5rem,6vw,2.2rem);max-width:none}
   .final .lead{font-size:.9rem}
   footer{padding:1.5rem 0 2rem;font-size:.72rem}
-  .strip{margin:1.5rem .9rem;border-radius:14px}
+  .strip{margin:1.5rem .9rem;border-radius:14px;max-width:calc(100vw - 1.8rem);box-sizing:border-box}
 }
 @media(max-width:360px){
   .hero h1{font-size:clamp(2rem,10vw,3rem);max-width:28ch;line-height:1.2;hyphens:none;word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
@@ -333,7 +333,7 @@ h1{hyphens:none}
 <section id="dor">
   <div class="wrap">
     <span class="kicker" data-i18n="painKicker">Como funciona o guia</span>
-    <h2 data-i18n="painTitle">O aplicativo pergunta: O que você está sentindo agora?<br>E você escolhe o tema.</h2>
+    <h2 data-i18n="painTitle" style="white-space:normal;text-wrap:balance">O aplicativo pergunta: O que você está sentindo agora?<br>E você escolhe o tema.</h2>
     <div class="hairline"></div>
     <p class="lead" data-i18n="painLead" style="max-width:58ch;margin:1.1rem auto 0;text-align:center;color:var(--muted);font-size:1.05rem">Não há menus complexos nem índices para decorar. A tela inicial mostra 18 botões com os temas reais da vida. Você toca no que ressoa — e vai direto ao diálogo com Deus para aquela dor.</p>
     <div class="grid g4" style="margin-top:2.5rem">
@@ -363,7 +363,7 @@ h1{hyphens:none}
 <section id="solucao">
   <div class="wrap">
     <span class="kicker" data-i18n="solKicker">A experiência</span>
-    <h2 data-i18n="solTitle">Você abre o app, vê o que sente, toca no botão — e começa o diálogo.</h2>
+    <h2 data-i18n="solTitle" style="hyphens:none;word-break:keep-all;overflow-wrap:normal">Você abre o app, vê o que sente, toca no botão — e começa o diálogo.</h2>
     <p class="lead" data-i18n="solLead">Sem índice, sem sumário, sem "capítulo 3". A navegação é pelo que você vive agora.</p>
     <div class="grid g2">
       <div class="sol-step"><span class="n">1</span><h3 data-i18n="solPoints:0:title">A tela pergunta: "Como está seu coração?"</h3><p data-i18n="solPoints:0:desc">18 temas reais em botões grandes e claros.</p></div>
